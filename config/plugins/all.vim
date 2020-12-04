@@ -95,6 +95,7 @@ if dein#tap('vim-lsp')
 	autocmd User lsp_float_opened
 		\ nmap <buffer> <silent> <Esc> <Plug>(lsp-preview-close)
 	autocmd User lsp_float_closed silent! nunmap <buffer> <Esc>
+	let g:lsp_highlights_enabled = 0
 endif
 
 if dein#tap('defx.nvim')
@@ -154,14 +155,14 @@ if dein#tap('vim-sandwich')
 	xmap <silent> sr <Plug>(operator-sandwich-replace)
 	nmap <silent> sdb <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
 	nmap <silent> srb <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
-	omap ib <Plug>(textobj-sandwich-auto-i)
-	xmap ib <Plug>(textobj-sandwich-auto-i)
-	omap ab <Plug>(textobj-sandwich-auto-a)
-	xmap ab <Plug>(textobj-sandwich-auto-a)
-	omap is <Plug>(textobj-sandwich-query-i)
-	xmap is <Plug>(textobj-sandwich-query-i)
-	omap as <Plug>(textobj-sandwich-query-a)
-	xmap as <Plug>(textobj-sandwich-query-a)
+	" omap ib <Plug>(textobj-sandwich-auto-i)
+	" xmap ib <Plug>(textobj-sandwich-auto-i)
+	" omap ab <Plug>(textobj-sandwich-auto-a)
+	" xmap ab <Plug>(textobj-sandwich-auto-a)
+	" omap is <Plug>(textobj-sandwich-query-i)
+	" xmap is <Plug>(textobj-sandwich-query-i)
+	" omap as <Plug>(textobj-sandwich-query-a)
+	" xmap as <Plug>(textobj-sandwich-query-a)
 endif
 
 if dein#tap('vim-operator-replace')

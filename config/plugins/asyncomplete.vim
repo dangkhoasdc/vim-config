@@ -84,4 +84,29 @@ endfunction
 "
 " let g:asyncomplete_preprocessor = [function('s:sort_by_priority_preprocessor')]
 
+function! s:my_asyncomplete_preprocessor(options, matches) abort 
+    let l:dict = {} 
+    for [l:source_name, l:matches] in items(a:matches) 
+        let l:source_priority = get(asyncomplete#get_source_info(l:source_name),'priority',0)
+        for l:item in l:matches['items'] 
+            if stridx(l:item['word'], a:options['base']) == 0
+            "if l:item['word'] =~ '^' . a:options['base'] 
+                let l:item['priority'] = l:source_priority
+                if has_key(l:dict,l:item['word'])
+                    let l:old_item = get(l:dict, l:item['word'])
+                    if l:old_item['priority'] <  l:source_priority
+                        let l:dict[item['word']] = l:item
+                    endif
+                else
+                    let l:dict[item['word']] = l:item
+                endif
+            endif 
+        endfor 
+    endfor 
+    let l:items =  sort(values(l:dict),{a, b -> b['priority'] - a['priority']})
+    call asyncomplete#preprocess_complete(a:options, l:items) 
+endfunction 
+
+let g:asyncomplete_preprocessor = [function('s:my_asyncomplete_preprocessor')]
+
 " vim: set ts=2 sw=2 tw=80 noet :

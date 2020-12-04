@@ -12,7 +12,7 @@ let g:loaded_devhelp = 1
 augroup plugin_devhelp
 	autocmd!
 
-	autocmd FileType yaml.ansible,php,css,less,html,markdown,vim,sql,ruby
+	autocmd FileType yaml.ansible,php,css,less,html,markdown,vim,sql,ruby,cpp
 		\ nmap <silent><buffer> gK :call <SID>show_help(expand('<cword>'))<CR>
 
 	autocmd FileType javascript,javascriptreact,conf
@@ -30,7 +30,7 @@ function! s:show_help(word, ...)
 	if executable('/Applications/Dash.app/Contents/MacOS/Dash')
 		execute '!open -g dash://' . l:expr
 	elseif executable('zeal')
-		execute '!zeal --query "' . l:expr . '"'
+		execute '!zeal ' . l:expr 
 	else
 		echohl ErrorMsg
 		echomsg 'Unable to find Dash or Zeal, install one of these.'

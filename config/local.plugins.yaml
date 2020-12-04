@@ -1,0 +1,13 @@
+---
+# PLUGINS
+# ===
+# See config/plugins/all.vim for plugin mappings and config/plugins/*.vim
+
+# Languages
+# ---------
+#
+# C++ 
+
+- { repo: bfrg/vim-cpp-modern, on_ft: cpp }
+
+#  vim: set ts=2 sw=2 tw=80 et :
