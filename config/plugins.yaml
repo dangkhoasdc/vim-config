@@ -182,10 +182,6 @@
 - { repo: dstein64/vim-startuptime, on_cmd: StartupTime }
 - { repo: lambdalisue/suda.vim, on_event: BufRead }
 
-- repo: liuchengxu/vim-which-key
-  on_cmd: [ WhichKey, WhichKeyVisual ]
-  hook_source: source $VIM_PATH/config/plugins/whichkey.vim
-
 - repo: lambdalisue/gina.vim
   on_cmd: Gina
   on_ft: [ gitcommit, gitrebase ]
