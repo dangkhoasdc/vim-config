@@ -14,14 +14,12 @@ if dein#tap('denite.nvim')
 	nnoremap <silent><LocalLeader>q :<C-u>Denite quickfix -buffer-name=list -no-start-filter<CR>
 	nnoremap <silent><LocalLeader>m :<C-u>Denite mark<CR>
 	nnoremap <silent><LocalLeader>n :<C-u>Denite dein<CR>
-	nnoremap <silent><LocalLeader>j :<C-u>Denite jump change file/point -no-start-filter<CR>
 	nnoremap <silent><LocalLeader>u :<C-u>Denite junkfile:new junkfile -buffer-name=list<CR>
 	nnoremap <silent><LocalLeader>o :<C-u>Denite outline -no-start-filter<CR>
 	nnoremap <silent><LocalLeader>s :<C-u>Denite session -buffer-name=list<CR>
 	nnoremap <silent><LocalLeader>t :<C-u>Denite tag<CR>
 	nnoremap <silent><LocalLeader>p :<C-u>Denite jump<CR>
 	nnoremap <silent><LocalLeader>h :<C-u>Denite help<CR>
-	nnoremap <silent><LocalLeader>w :<C-u>Denite file/rec -buffer-name=memo -path=~/docs/blog<CR>
 	nnoremap <silent><LocalLeader>x :<C-u>Denite file_mru<CR>
 	nnoremap <silent><LocalLeader>z :<C-u>Denite z -buffer-name=list<CR>
 	nnoremap <silent><LocalLeader>; :<C-u>Denite command_history command<CR>
@@ -101,7 +99,8 @@ if dein#tap('vim-lsp')
 	autocmd User lsp_float_opened
 		\ nmap <buffer> <silent> <Esc> <Plug>(lsp-preview-close)
 	autocmd User lsp_float_closed silent! nunmap <buffer> <Esc>
-	let g:lsp_highlights_enabled = 0
+	let g:lsp_highlights_enabled = 1
+        let g:lsp_diagnostics_highlights_enabled = 0
 	autocmd user_events FileType markdown.lsp-hover
 		\ nmap <silent><buffer>q :pclose<CR>| doautocmd <nomodeline> BufWinEnter
 
@@ -264,10 +263,6 @@ if dein#tap('python_match.vim')
 		\ | nmap <buffer> }} ]%
 endif
 
-if dein#tap('goyo.vim')
-	nnoremap <Leader>G :Goyo<CR>
-endif
-
 if dein#tap('vim-shot-f')
 	nmap f  <Plug>(shot-f-f)
 	nmap F  <Plug>(shot-f-F)
@@ -281,10 +276,6 @@ if dein#tap('vim-shot-f')
 	omap F  <Plug>(shot-f-F)
 	omap t  <Plug>(shot-f-t)
 	omap T  <Plug>(shot-f-T)
-endif
-
-if dein#tap('vimwiki')
-	nnoremap <silent> <Leader>W :<C-u>VimwikiIndex<CR>
 endif
 
 if dein#tap('vim-choosewin')
@@ -426,6 +417,11 @@ if dein#tap('vim-textobj-function')
 	omap <silent> if <Plug>(textobj-function-i)
 	xmap <silent> af <Plug>(textobj-function-a)
 	xmap <silent> if <Plug>(textobj-function-i)
+endif
+
+if dein#tap('vim-grepper')
+	nmap <LocalLeader>w <plug>(GrepperOperator)
+	xmap <LocalLeader>w <plug>(GrepperOperator)
 endif
 
 " vim: set ts=2 sw=2 tw=80 noet :

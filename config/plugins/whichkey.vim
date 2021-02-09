@@ -14,7 +14,6 @@ call which_key#register('<Space>', "g:which_key_map")
 let g:which_key_map = {
 	\ 'name': 'rafi vim',
 	\ '-': 'swap window select',
-	\ '?': 'open dictionary',
 	\ 'a': 'open structure',
 	\ 'b': 'find in structure',
 	\ 'd': 'duplicate line',
@@ -31,7 +30,6 @@ let g:which_key_map = {
 	\ 'S': 'source vim line',
 	\ 'V': 'comment wrap toggle',
 	\ 'v': 'comment toggle',
-	\ 'W': 'open wiki',
 	\ 'w': 'save',
 	\ 'Y': 'yank relative path',
 	\ 'y': 'yank absolute path',

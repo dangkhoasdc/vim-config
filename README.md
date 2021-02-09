@@ -308,7 +308,6 @@ _Note_ that 95% of the plugins are **[lazy-loaded]**.
 | [MaxMEllon/vim-jsx-pretty] | React JSX syntax pretty highlighting
 | [leafOfTree/vim-svelte-plugin] | Syntax and indent plugin for Svelte
 | [heavenshell/vim-jsdoc] | Generate JSDoc to your JavaScript code
-| [jparise/vim-graphql] | GraphQL file detection, syntax highlighting, and indentation
 | [moll/vim-node] | Superb development with Node.js
 | [kchmck/vim-coffee-script] | CoffeeScript support
 | [elzr/vim-json] | Better JSON support
@@ -333,13 +332,8 @@ _Note_ that 95% of the plugins are **[lazy-loaded]**.
 | [dag/vim-fish] | Fish shell edit support
 | [jstrater/mpvim] | Macports portfile configuration files
 | [robbles/logstash.vim] | Highlights logstash configuration files
-| [lifepillar/pgsql.vim] | PostgreSQL syntax and indent
 | [chr4/nginx.vim] | Improved nginx syntax and indent
-| [towolf/vim-helm] | Syntax for Helm templates (yaml + gotmpl + sprig)
-| [udalov/kotlin-vim] | Kotlin syntax and indent
 | [reasonml-editor/vim-reason-plus] | Reason syntax and indent
-| [pearofducks/ansible-vim] | Improved YAML support for Ansible
-| [hashivim/vim-terraform] | Base Terraform integration
 
 #### Commands
 
@@ -359,7 +353,6 @@ _Note_ that 95% of the plugins are **[lazy-loaded]**.
 | [kana/vim-altr] | Switch to the alternate file without interaction
 | [Shougo/vinarise.vim] | Hex editor
 | [guns/xterm-color-table.vim] | Display 256 xterm colors with their RGB equivalents
-| [cocopon/colorswatch.vim] | Generate a beautiful color swatch for the current buffer
 | [dstein64/vim-startuptime] | Visually profile Vim's startup time
 | [lambdalisue/suda.vim] | An alternative sudo.vim for Vim and Neovim
 | [liuchengxu/vim-which-key] | Shows key-bindings in pop-up
@@ -394,11 +387,9 @@ _Note_ that 95% of the plugins are **[lazy-loaded]**.
 | [kshenoy/vim-signature] | Display and toggle marks
 | [nathanaelkane/vim-indent-guides] | Visually display indent levels in code
 | [rhysd/committia.vim] | Pleasant editing on Git commit messages
-| [junegunn/goyo] | Distraction-free writing
 | [junegunn/limelight] | Hyperfocus-writing
 | [itchyny/calendar.vim] | Calendar application
 | [deris/vim-shot-f] | Highlight characters to move directly with f/t/F/T
-| [vimwiki/vimwiki] | Personal Wiki for Vim
 | [norcalli/nvim-colorizer.lua] | The fastest Neovim colorizer
 
 #### Completion & Code-Analysis
@@ -558,7 +549,6 @@ _Note_ that 95% of the plugins are **[lazy-loaded]**.
 [junegunn/limelight]: https://github.com/junegunn/limelight.vim
 [itchyny/calendar.vim]: https://github.com/itchyny/calendar.vim
 [deris/vim-shot-f]: https://github.com/deris/vim-shot-f
-[vimwiki/vimwiki]: https://github.com/vimwiki/vimwiki
 [norcalli/nvim-colorizer.lua]: https://github.com/norcalli/nvim-colorizer.lua
 
 [prabirshrestha/async.vim]: https://github.com/prabirshrestha/async.vim
@@ -760,7 +750,6 @@ Note that,
 | <kbd>Space</kbd>+<kbd>G</kbd> | 𝐍 | Toggle distraction-free writing | <small>[junegunn/goyo]</small>
 | <kbd>Space</kbd>+<kbd>gu</kbd> | 𝐍 | Open undo-tree | <small>[mbbill/undotree]</small>
 | <kbd>Space</kbd>+<kbd>K</kbd> | 𝐍 | Thesaurus | <small>[Ron89/thesaurus_query.vim]</small>
-| <kbd>Space</kbd>+<kbd>W</kbd> | 𝐍 | VimWiki | <small>[vimwiki/vimwiki]</small>
 
 ### Window Management
 

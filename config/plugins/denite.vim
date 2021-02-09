@@ -78,7 +78,7 @@ let g:denite_position = get(g:, 'denite_position', 'centertop')
 call s:denite_resize(g:denite_position)
 
 " MATCHERS
-" Default is 'matcher/fuzzy'
+" Default is 'matcher/fuzzy'*
 call denite#custom#source('tag', 'matchers', ['matcher/substring'])
 call denite#custom#source('file/old', 'matchers', [
 	\ 'matcher/project_files', 'matcher/ignore_globs' ])
@@ -111,11 +111,11 @@ call denite#custom#source(
 " Ripgrep
 if executable('rg')
 	call denite#custom#var('file/rec', 'command',
-		\ ['rg', '--hidden', '--files', '--glob', '!.git', '--color', 'never'])
+		\ ['rg', '--hidden', '--files', '--glob', '!.git/**', '--glob', '!.clangd/**', '--color', 'never'])
 
 	call denite#custom#var('grep', {
 		\ 'command': ['rg'],
-		\ 'default_opts': ['--hidden', '-i', '--vimgrep', '--no-heading'],
+		\ 'default_opts': ['--hidden', '-i', '--vimgrep', '--no-heading', '--glob', '!.git/**', '--glob', '!.clangd/**'],
 		\ 'recursive_opts': [],
 		\ 'pattern_opt': ['--regexp'],
 		\ })
